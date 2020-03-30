@@ -32,7 +32,7 @@
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true" />
             </column>
-            <column name="created" type="TIMESTAMP" defaultValue="now()">
+            <column name="created" type="Date" defaultValue="now()">
                 <constraints nullable="false" unique="false" />
             </column>
             <column name="customer_id" type="BIGINT" />

@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode(callSuper = true)
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 public class Purchase extends BaseEntity {
     @CreatedDate
     @Column(name = "created")
-    private LocalDateTime created;
+    private LocalDate created;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "customer_id" )
     Customer customer;
