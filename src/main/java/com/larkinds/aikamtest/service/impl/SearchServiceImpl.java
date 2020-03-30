@@ -1,7 +1,7 @@
 package com.larkinds.aikamtest.service.impl;
 
 import com.larkinds.aikamtest.dto.model.CustomerDto;
-import com.larkinds.aikamtest.mapper.CustomerMapper;
+import com.larkinds.aikamtest.mapper.entity.CustomerMapper;
 import com.larkinds.aikamtest.repository.CustomerRepository;
 import com.larkinds.aikamtest.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +45,5 @@ public class SearchServiceImpl implements SearchService {
     public List<CustomerDto> findBadCustomers(Integer limit) {
         return customerMapper.toDtoList(customerRepository.findBadCustomers(PageRequest.of(0, limit)).toList());
     }
+
 }

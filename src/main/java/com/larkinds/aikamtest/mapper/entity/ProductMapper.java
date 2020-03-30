@@ -1,4 +1,4 @@
-package com.larkinds.aikamtest.mapper;
+package com.larkinds.aikamtest.mapper.entity;
 
 import com.larkinds.aikamtest.dto.model.ProductDto;
 import com.larkinds.aikamtest.model.Product;
