@@ -1,5 +1,6 @@
 package com.larkinds.aikamtest.service.impl;
 
+import com.larkinds.aikamtest.dto.fromjson.input.StatDto;
 import com.larkinds.aikamtest.dto.model.CustomerDto;
 import com.larkinds.aikamtest.mapper.CustomerMapper;
 import com.larkinds.aikamtest.repository.CustomerRepository;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -18,6 +20,7 @@ import java.util.List;
 public class SearchServiceImpl implements SearchService {
     private CustomerRepository customerRepository;
     private CustomerMapper customerMapper;
+
 
     @Autowired
     public SearchServiceImpl(CustomerRepository customerRepository, CustomerMapper customerMapper) {
@@ -45,4 +48,5 @@ public class SearchServiceImpl implements SearchService {
     public List<CustomerDto> findBadCustomers(Integer limit) {
         return customerMapper.toDtoList(customerRepository.findBadCustomers(PageRequest.of(0, limit)).toList());
     }
+
 }
