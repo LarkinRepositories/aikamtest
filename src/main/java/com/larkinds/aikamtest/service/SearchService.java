@@ -16,7 +16,7 @@ public interface SearchService {
      * @param lastName last name to search
      * @return list of CustomerDto matched @param criteria
      */
-    List<CustomerDto> findAllByLastName(String lastName);
+    List<CustomerDto> findAllByLastName(String lastName) throws Exception;
 
     /**
      * Retuns list of CustomerDto which bought productName certain amount of times (puchaseCount)
@@ -24,7 +24,7 @@ public interface SearchService {
      * @param purchaseCount amount of times product'd been bought
      * @return list of CustomerDto matched @param criteria
      */
-    List<CustomerDto> findByProductNameAndPurchaseCount(String productName, long purchaseCount);
+    List<CustomerDto> findByProductNameAndPurchaseCount(String productName, long purchaseCount) throws Exception;
 
     /**
      * Returns list of CustomerDto which total amount of money spent on products in a certain interval
@@ -32,13 +32,13 @@ public interface SearchService {
      * @param maxValue maximum amount of money spent
      * @return list of CustomerDto matched @param criteria
      */
-    List<CustomerDto> findAllWithExpense(BigDecimal minValue, BigDecimal maxValue);
+    List<CustomerDto> findAllWithExpense(BigDecimal minValue, BigDecimal maxValue) throws Exception;
 
     /**
      * Returns list of CustomerDto wich bought the least amount of products with list size limited to @param limit
      * @param limit amount of customers
      * @return list of CustomerDto matched @param criteria
      */
-    List<CustomerDto> findBadCustomers(Integer limit);
+    List<CustomerDto> findBadCustomers(Integer limit) throws Exception;
 
 }

@@ -6,10 +6,10 @@ import java.time.LocalDate;
 
 public interface StatService {
     /**
-     *
-     * @param startDate
-     * @param endDate
-     * @return
+     * Returns statistic by purchases made in a certain interval of time
+     * @param startDate search start point
+     * @param endDate search end point
+     * @return statistic matching criteria
      */
-    StatOutPut getStat(LocalDate startDate, LocalDate endDate);
+    StatOutPut getStat(LocalDate startDate, LocalDate endDate) throws Exception;
 }
