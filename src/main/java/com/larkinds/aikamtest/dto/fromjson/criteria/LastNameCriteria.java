@@ -14,6 +14,7 @@ import static java.util.Objects.requireNonNull;
 
 @Value
 public class LastNameCriteria implements Criteria {
+    @JsonProperty("lastName")
     String lastName;
 
     @JsonCreator

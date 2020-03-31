@@ -13,8 +13,9 @@ import static java.util.Objects.requireNonNull;
 
 @Value
 public class ProductNameMinTimesCriteria implements Criteria {
-    @JsonTypeId
+    @JsonProperty("productName")
     String productName;
+    @JsonProperty("minTimes")
     Integer minTimes;
 
     @JsonCreator

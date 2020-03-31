@@ -12,6 +12,7 @@ import static java.util.Objects.requireNonNull;
 
 @Value
 public class BadCustomersCriteria implements Criteria {
+    @JsonProperty("badCustomers")
     Integer limit;
 
     @JsonCreator

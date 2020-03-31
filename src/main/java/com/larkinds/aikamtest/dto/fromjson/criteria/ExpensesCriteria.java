@@ -14,8 +14,9 @@ import static java.util.Objects.requireNonNull;
 
 @Value
 public class ExpensesCriteria implements Criteria {
-    @JsonTypeId
+    @JsonProperty("minExpenses")
     Integer minExpenses;
+    @JsonProperty("maxExpenses")
     Integer maxExpenses;
 
     @JsonCreator
