@@ -7,5 +7,5 @@ public interface MainService {
      * @param args args[0] should be operation type (search or stat), args[1] input file path, args[2] output file path
      * @return object written to output file
      */
-    OutputDto processAndWrite(String...args);
+    OutputDto processAndWrite(String...args) throws Exception;
 }

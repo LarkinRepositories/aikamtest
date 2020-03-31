@@ -30,7 +30,7 @@ public class StatServiceImpl implements StatService {
     }
 
     @Override
-    public StatOutPut getStat(LocalDate startDate, LocalDate endDate) {
+    public StatOutPut getStat(LocalDate startDate, LocalDate endDate) throws Exception {
         Integer totalDays = Period.between(startDate, endDate).getDays();
         List<PurchaseDto> purchases = purchaseMapper.toDtoList(purchaseRepository.findAllByCreatedBetween(startDate, endDate));
         Set<CustomerStatDto> customers = purchases.stream().distinct().

@@ -29,7 +29,7 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public List<CustomerDto> findAllByLastName(String lastName) {
+    public List<CustomerDto> findAllByLastName(String lastName)  {
         return customerMapper.toDtoList(customerRepository.findAllByLastName(lastName));
     }
 
