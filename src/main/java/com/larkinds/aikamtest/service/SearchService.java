@@ -1,8 +1,12 @@
 package com.larkinds.aikamtest.service;
 
+import com.larkinds.aikamtest.dto.fromjson.input.StatDto;
 import com.larkinds.aikamtest.dto.model.CustomerDto;
+import com.larkinds.aikamtest.dto.tojson.output.StatOutPut;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 

@@ -14,6 +14,7 @@ import java.util.List;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
+
     /**
      * Returns a list of all customers having specific last name
      * @param lastName last name to search to
